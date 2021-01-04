@@ -35,7 +35,7 @@ public class TrustFallPlugin implements MethodCallHandler {
     } else if (call.method.equals("isJailBroken")) {
       result.success(RootedCheck.isJailBroken(context));
     } else if (call.method.equals("canMockLocation")) {
-      MockLocationCheck.LocationResult locationResult = new MockLocationCheck.LocationResult(){
+     /* MockLocationCheck.LocationResult locationResult = new MockLocationCheck.LocationResult(){
         @Override
         public void gotLocation(Location location){
           //Got the location!
@@ -45,9 +45,9 @@ public class TrustFallPlugin implements MethodCallHandler {
             result.success(false);
           }
         }
-      };
-      MockLocationCheck mockLocationCheck = new MockLocationCheck();
-      mockLocationCheck.getLocation(context, locationResult);
+      };*/
+//      MockLocationCheck mockLocationCheck = new MockLocationCheck();
+//      mockLocationCheck.getLocation(context, locationResult);
     }else if (call.method.equals("isRealDevice")) {
       result.success(!EmulatorCheck.isEmulator());
     }else if (call.method.equals("isOnExternalStorage")) {
